@@ -1,5 +1,5 @@
-describe('Placeholder', function() {
-  it('Basic test', function() {
+describe('Placeholder', () => {
+  it('Basic test', () => {
     expect(true).toBeTruthy()
   })
 })
