@@ -5,6 +5,7 @@ module.exports = {
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
+    ecmaVersion: "2020"
   },
   extends: [
     'eslint:recommended',
