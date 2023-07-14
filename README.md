@@ -1,1 +1,1 @@
-# origami-js-mill-coinbase
+# origami-js-mill-coingecko
