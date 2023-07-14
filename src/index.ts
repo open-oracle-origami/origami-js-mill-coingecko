@@ -18,14 +18,14 @@ export class CoinGeckoMill extends BaseMill {
   simplePriceParams: SimplePriceParams
 
   constructor({
-    id = 'coingecko',
+    id = 'mill.coingecko',
     // @ts-ignore
     simplePriceParams,
     pollIntervalMs = 5000,
   }) {
     super()
 
-    if (id) this.setId(id)
+    if (id) this.setId(`mill.${id.replace('mill.', '')}`)
     this.pollIntervalMs = pollIntervalMs
     this.simplePriceParams = simplePriceParams
     this.client = new CoinGeckoClient({
@@ -41,7 +41,7 @@ export class CoinGeckoMill extends BaseMill {
         created: new Date(),
       }
 
-      this.emitter.publish(`mill.${this.id ?? 'undefined'}`, paper)
+      this.emitter.publish(`${this.id}`, paper)
     })
   }
 
