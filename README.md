@@ -3,7 +3,7 @@ This repository contains an Open Oracle Origami JS Mill for CoinGecko.
 
 For best results, use in conjunction with the [Open Oracle Origami JS SDK](https://github.com/open-oracle-origami/origami-js-sdk).
 
-When used with the SDK, this mill will provide price feed data from the CoinGecko Simple Price endpoint while bringing you one step closer to launching your very own custom Open Oracle Origami Curator Node.
+When used with the SDK, this mill provides price feed data from the CoinGecko Simple Price endpoint while bringing you one step closer to launching your very own custom Open Oracle Origami Curator Node.
 
 *Any form, any shape. Web3’s modular open oracle.*
 
@@ -77,7 +77,7 @@ Mill currently supports the [Simple Price](https://www.coingecko.com/api/documen
 > An object that contains the following parameters for the CoinGecko [Simple Price](https://www.coingecko.com/api/documentations/v3#/simple/get_simple_price) endpoint.
 > 
 > - **ids** (string or array): *required*  
->   - Ids of the tokens or coins to query. [ID List](https://www.coingecko.com/api/documentations/v3#/coins/get_coins_list)
+>   - Ids of the tokens or coins to query. [Id List](https://www.coingecko.com/api/documentations/v3#/coins/get_coins_list)
 > - **vs_currencies** (string or array): *required* 
 >   - Currencies of each token or coin to fetch. [Currency List](https://www.coingecko.com/api/documentations/v3#/simple/get_simple_supported_vs_currencies)
 > - **include_market_cap** (boolean): *optional*
