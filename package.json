@@ -1,6 +1,6 @@
 {
   "name": "@open-oracle-origami/origami-js-mill-coingecko",
-  "version": "0.0.0-alpha",
+  "version": "0.0.0",
   "private": false,
   "description": "Open Oracle Origami Node JS CoinGecko Mill",
   "keywords": [
@@ -23,30 +23,17 @@
   },
   "license": "MIT",
   "author": "",
-  "type": "module",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/esm/index.d.ts",
-        "default": "./dist/esm/index.js"
-      },
-      "require": {
-        "types": "./dist/cjs/index.d.ts",
-        "default": "./dist/cjs/index.js"
-      }
-    }
-  },
   "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
   "files": [
     "dist/"
   ],
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && npm run build:types",
-    "build:cjs": "npm run clean cjs && tsc -p config/tsconfig.cjs.json",
-    "build:esm": "npm run clean esm && tsc -p config/tsconfig.esm.json",
-    "build:types": "npm run clean types && tsc -p config/tsconfig.types.json",
-    "clean": "node tools/cleanup",
+    "build:cjs": "rm -rf ./dist/cjs && tsc -p config/tsconfig.cjs.json",
+    "build:esm": "rm -rf ./dist/esm && tsc -p config/tsconfig.esm.json",
+    "build:types": "rm -rf ./dist/types && tsc -p config/tsconfig.types.json",
     "cm": "cz",
     "lint": "eslint jest.config.ts ./src/ ./test/ --fix",
     "package": "npm run build && cp package.json dist/package.json && npm pack",
@@ -67,7 +54,11 @@
   "release": {
     "branches": [
       "main",
-      {"name": "alpha", "channel": "alpha", "prerelease": "alpha"}
+      {
+        "name": "alpha",
+        "channel": "alpha",
+        "prerelease": "alpha"
+      }
     ],
     "plugins": [
       [
@@ -115,6 +106,9 @@
     "poll": "^3.2.2"
   },
   "devDependencies": {
+    "@tsconfig/esm": "^1.0.4",
+    "@tsconfig/node18": "^18.2.0",
+    "@tsconfig/recommended": "^1.0.2",
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.2",
     "@types/pubsub-js": "^1.8.3",
@@ -144,6 +138,6 @@
     "node": ">=18.16.1"
   },
   "peerDependencies": {
-    "@open-oracle-origami/origami-js-sdk": "^1.0.0-alpha.1"
+    "@open-oracle-origami/origami-js-sdk": "^1.0.0-alpha.7"
   }
 }
