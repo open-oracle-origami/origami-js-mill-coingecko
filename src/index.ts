@@ -7,11 +7,9 @@ const CoinGeckoMill = ({
   id = 'coingecko',
   ...rest
 }: CoinGeckoMillConfig): IMill => {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   const init: InitFn = ({ press }: IMill) => main({ press, ...rest })
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-  return new Mill({ id, init }) as IMill
+  return Mill.create({ id, init })
 }
 
 export default CoinGeckoMill

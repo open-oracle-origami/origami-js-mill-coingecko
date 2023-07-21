@@ -35,7 +35,7 @@ For more information on how to use a curator, please see the [Open Oracle Origam
 import { Curator } from '@open-oracle-origami/origami-js-sdk'
 import CoinGeckoMill from '@open-oracle-origami/origami-js-mill-coingecko'
 
-const curator = new Curator({ id: 'my-curator' })
+const curator = Curator.create({ id: 'my-curator' })
 
 const mill = CoinGeckoMill({
   simplePriceParams: {
