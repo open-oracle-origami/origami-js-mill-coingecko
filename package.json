@@ -61,7 +61,7 @@
   "release": {
     "branches": [
       "main",
-      "alpha"
+      {"name": "alpha", "channel": "alpha", "prerelease": "alpha"}
     ],
     "plugins": [
       [
@@ -138,6 +138,6 @@
     "node": ">=18.16.1"
   },
   "peerDependencies": {
-    "@open-oracle-origami/origami-js-sdk": "^0.0.0-alpha"
+    "@open-oracle-origami/origami-js-sdk": "^1.0.0-alpha.1"
   }
 }
