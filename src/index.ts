@@ -1,15 +1,5 @@
-import { Mill, IMill, InitFn } from '@open-oracle-origami/origami-js-sdk'
+import CoinGeckoMill from './CoinGeckoMill'
 
-import main from './main'
-import { CoinGeckoMillConfig } from './types'
-
-const CoinGeckoMill = ({
-  id = 'coingecko',
-  ...rest
-}: CoinGeckoMillConfig): IMill => {
-  const init: InitFn = ({ press }: IMill) => main({ press, ...rest })
-
-  return Mill.create({ id, init })
-}
-
+export * from './types'
+export { CoinGeckoMill }
 export default CoinGeckoMill
