@@ -1,7 +1,7 @@
-import { poll } from 'poll'
 import { CoinGeckoClient } from 'coingecko-api-v3'
 import { CallbackFn } from '@open-oracle-origami/origami-js-sdk'
 
+import poll from './poll'
 import { MainConfig, SimplePriceParams } from './types'
 
 export default ({

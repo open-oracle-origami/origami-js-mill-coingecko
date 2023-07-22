@@ -102,8 +102,7 @@
     ]
   },
   "dependencies": {
-    "coingecko-api-v3": "^0.0.26",
-    "poll": "^3.2.2"
+    "coingecko-api-v3": "^0.0.26"
   },
   "devDependencies": {
     "@tsconfig/esm": "^1.0.4",
