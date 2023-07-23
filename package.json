@@ -137,6 +137,6 @@
     "node": ">=18.16.1"
   },
   "peerDependencies": {
-    "@open-oracle-origami/origami-js-sdk": "^1.0.0-alpha.7"
+    "@open-oracle-origami/origami-js-sdk": "^1.0.0-alpha.10"
   }
 }

@@ -1,7 +1,6 @@
 import { CoinGeckoClient } from 'coingecko-api-v3'
-import { CallbackFn } from '@open-oracle-origami/origami-js-sdk'
+import { CallbackFn, utils } from '@open-oracle-origami/origami-js-sdk'
 
-import poll from './poll'
 import { MainConfig, SimplePriceParams } from './types'
 
 export default ({
@@ -40,7 +39,7 @@ export default ({
     })
   }
 
-  void poll(pressAllIds, interval, () => stop)
+  void utils.poll(pressAllIds, interval, () => stop)
 
   return (): void => {
     stop = true
