@@ -5,11 +5,12 @@ import { CoinGeckoMillConfig } from './types'
 
 const CoinGeckoMill = ({
   id = 'coingecko',
+  emitter,
   ...rest
 }: CoinGeckoMillConfig): IMill => {
   const init: InitFn = ({ press }: IMill) => main({ press, ...rest })
 
-  return Mill.create({ id, init })
+  return Mill.create({ id, emitter, init })
 }
 
 export default CoinGeckoMill

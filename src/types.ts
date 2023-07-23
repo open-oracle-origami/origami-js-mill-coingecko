@@ -1,4 +1,4 @@
-import { IMill } from '@open-oracle-origami/origami-js-sdk'
+import { IMill, IPubSub } from '@open-oracle-origami/origami-js-sdk'
 
 export type SimplePriceParamsOptional = {
   include_market_cap?: boolean
@@ -31,4 +31,5 @@ export type MainConfig = MainConfigDefaults & {
 
 export type CoinGeckoMillConfig = MainConfigDefaults & {
   id?: string
+  emitter?: IPubSub
 }
