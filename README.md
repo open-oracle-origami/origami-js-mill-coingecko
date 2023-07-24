@@ -74,9 +74,9 @@ Mill currently supports the [Simple Price](https://www.coingecko.com/api/documen
 **simplePriceParams** (object): *required*
 - An object that contains the following parameters for the CoinGecko [Simple Price](https://www.coingecko.com/api/documentations/v3#/simple/get_simple_price) endpoint.
     - **ids** (string or array): *required*
-        - Ids of the tokens or coins to query. [Id List](https://www.coingecko.com/api/documentations/v3#/coins/get_coins_list)
+        - Ids of the tokens or coins to query. [Id List](https://api.coingecko.com/api/v3/coins/list?include_platform=true)
     - **vs_currencies** (string or array): *required*
-        - Currencies of each token or coin to fetch. [Currency List](https://www.coingecko.com/api/documentations/v3#/simple/get_simple_supported_vs_currencies)
+        - Currencies of each token or coin to fetch. [Currency List](https://api.coingecko.com/api/v3/simple/supported_vs_currencies)
     - **include_market_cap** (boolean): *optional*
         - Include market cap in the response. Defaults to `false`.
     - **include_24hr_vol** (boolean): *optional*
