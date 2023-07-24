@@ -68,42 +68,35 @@ Mill currently supports the [Simple Price](https://www.coingecko.com/api/documen
 
 ### Config
 
-> **id** (string): *optional* 
-> 
-> The id of the mill. Defaults to `mill.coingecko`.
+**id** (string): *optional* 
+- The id of the mill. Defaults to `mill.coingecko`.
  
-> **simplePriceParams** (object): *required*
-> 
-> An object that contains the following parameters for the CoinGecko [Simple Price](https://www.coingecko.com/api/documentations/v3#/simple/get_simple_price) endpoint.
-> 
-> - **ids** (string or array): *required*  
->   - Ids of the tokens or coins to query. [Id List](https://www.coingecko.com/api/documentations/v3#/coins/get_coins_list)
-> - **vs_currencies** (string or array): *required* 
->   - Currencies of each token or coin to fetch. [Currency List](https://www.coingecko.com/api/documentations/v3#/simple/get_simple_supported_vs_currencies)
-> - **include_market_cap** (boolean): *optional*
->   - Include market cap in the response. Defaults to `false`.
-> - **include_24hr_vol** (boolean): *optional*
->   - Include 24hr volume in the response. Defaults to `false`.
-> - **include_24hr_change** (boolean): *optional*
->   - Include 24hr change in the response. Defaults to `false`.
-> - **include_last_updated_at** (boolean): *optional*
->   - Include last updated at timestamp in the response. Defaults to `false`.
+**simplePriceParams** (object): *required*
+- An object that contains the following parameters for the CoinGecko [Simple Price](https://www.coingecko.com/api/documentations/v3#/simple/get_simple_price) endpoint.
+    - **ids** (string or array): *required*
+        - Ids of the tokens or coins to query. [Id List](https://www.coingecko.com/api/documentations/v3#/coins/get_coins_list)
+    - **vs_currencies** (string or array): *required*
+        - Currencies of each token or coin to fetch. [Currency List](https://www.coingecko.com/api/documentations/v3#/simple/get_simple_supported_vs_currencies)
+    - **include_market_cap** (boolean): *optional*
+        - Include market cap in the response. Defaults to `false`.
+    - **include_24hr_vol** (boolean): *optional*
+        - Include 24hr volume in the response. Defaults to `false`.
+    - **include_24hr_change** (boolean): *optional*
+        - Include 24hr change in the response. Defaults to `false`.
+    - **include_last_updated_at** (boolean): *optional*
+        - Include last updated at timestamp in the response. Defaults to `false`.
 
-> **interval** (number): *optional*
-> 
-> Polling interval in milliseconds. Defaults to `5000` (5 Seconds).
+**interval** (number): *optional*
+- Polling interval in milliseconds. Defaults to `5000` (5 Seconds).
 
-> **timeout** (number): *optional*
-> 
-> Mill timeout in milliseconds. Defaults to `10000` (10 Seconds).
+**timeout** (number): *optional*
+- Mill timeout in milliseconds. Defaults to `10000` (10 Seconds).
 
-> **autoRetry** (boolean): *optional*
->
-> Auto retry if the http response code is 429 (too many requests). Defaults to `true`.
+**autoRetry** (boolean): *optional*
+- Auto retry if the http response code is 429 (too many requests). Defaults to `true`.
 
-> **apiKey** (string): *optional*
->
-> Api key for CoinGecko paid versions with higher rate limits. [More Info](https://www.coingecko.com/en/api/pricing)
+**apiKey** (string): *optional*
+- Api key for CoinGecko paid versions with higher rate limits. [More Info](https://www.coingecko.com/en/api/pricing)
 
 ### Example Config
 ```JavaScript
